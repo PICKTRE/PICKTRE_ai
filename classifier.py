@@ -14,11 +14,13 @@ from sklearn.model_selection import train_test_split
 from PIL import Image, UnidentifiedImageError
 
 # 사용자 셋팅
-data_dir = 'TrashBox\TrashBox_train_dataset_subfolders'  # 데이터셋 폴더 경로를 지정해줘
+data_dir = 'TrashBox\TrashBox_train_set' 
 saved_model_dir = 'fine_tuned_saved_model'
-saved_model_file = 'model/mobilenetv2_fine_tuned.h5'
+saved_model_file = 'model/ResNet50V2_fine_tuned.h5'
 image_exts = ['.jpg', '.jpeg', '.png']
-# MobileNetV2 모델 수정 및 완전 연결층 추가
+
+
+# ResNet50V2 모델 수정 및 완전 연결층 추가
 def create_fine_tune_model():
     input = layers.Input(shape=(224, 224, 3))
     base_model = ResNet50V2(input_tensor=input, include_top=False, weights='imagenet')
@@ -26,7 +28,11 @@ def create_fine_tune_model():
 
     # 모델 정규화 및 완전 연결층 추가
     x = layers.GlobalAveragePooling2D()(bm_output)
-    x = layers.Dense(25, activation="softmax")(x)
+    x = layers.Dense(1024)(x)
+    x = layers.BatchNormalization()(x)
+    x = layers.Activation('relu')(x)
+    x = layers.Dropout(0.5)(x)
+    x = layers.Dense(7, activation="softmax")(x)
     
     fine_tuned_model = Model(input, x)
     return fine_tuned_model
@@ -52,6 +58,7 @@ def create_dataframe(data_dir, exts):
                         im.verify()  # 이미지 파일 유효성 검사
                 except (IOError, ValueError, UnidentifiedImageError):
                     print(f"Invalid image file '{file_path}', skipped.")
+                    os.remove(file_path)
                     continue
                 label = os.path.split(subdir)[-1].lower()
                 data.append((file_path, label))
@@ -101,7 +108,7 @@ validation_generator = train_datagen.flow_from_dataframe(dataframe=valid_data,
 model = create_fine_tune_model()
 model.summary()
 
-# 기존 MobileNetV2 층 동결
+# 기존 ResNet50V2 층 동결
 for layer in model.layers[:-1]:
     layer.trainable = False
 
@@ -130,5 +137,6 @@ callbacks_list = [lrate, early_stopping]
 # 미세 조정(fine-tuning) 실행
 history = model.fit(train_generator, validation_data=validation_generator, epochs=70, verbose=1, callbacks=callbacks_list)
 
-model.save('model/mobilenetv2_fine_tuned.h5')
+#모델 세이브
+model.save('model/ResNet50V2_fine_tuned.h5')
 tf.saved_model.save(model, 'fine_tuned_saved_model')
