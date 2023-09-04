@@ -15,7 +15,7 @@
 ### 개발 환경
 requirements.txt
 
-(https://github.com/PICKTRE/PICKTRE_ai/blob/a68d7809ecaca56f16b32f124d3a9df033e59003/LICENSE)
+https://github.com/PICKTRE/PICKTRE_ai/blob/8d565980f1e721da5b1a30908f707a05277bf6ab/requirements.txt
 
 ### 모델 아키텍쳐
 
