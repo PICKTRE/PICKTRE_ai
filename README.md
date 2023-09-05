@@ -13,11 +13,34 @@
 이러한 배경에서 PICKTRE는 쓰레기를 적절하게 처리하고, 시민들의 쓰레기 버리기 습관을 개선하여 환경보호와 재활용 문화를 확산 시키는데 목적을 두고 있습니다. 또한, 사용자들이 쓰레기를 버릴 때 보상을 제공하여 쓰레기 문제에 대한 인식과 참여 향상을 목표로 합니다.
 
 ### 개발 환경
-requirements.txt
-
+#### requirements.txt
+---
 https://github.com/PICKTRE/PICKTRE_ai/blob/8d565980f1e721da5b1a30908f707a05277bf6ab/requirements.txt
 
+#### 사용 데이터셋
+---
+TrashBox
+
+https://github.com/nikhilvenkatkumsetty/TrashBox
+
+다음과 같은 쓰레기 종류에 대한 데이터셋을 사용하였습니다.
+
+Medical waste : Syringes, Surgical Gloves, Surgical Masks, Medicines( Drugs and Pills) [Number of images: 2010]
+
+E-Waste : Electronic chips, Laptops and Smartphones, Applicances, Electric wires, cords and cables [Number of images: 2883]
+
+Plastic : Bags, Bottles, Containers, Cups, Cigarette Butts (which have a plastic filter) [Number of images: 2669]
+
+Paper : Tetra Pak, News Papers, Paper Cups, Paper Tissues [Number of images: 2695]
+
+Metal : Beverage Cans, Cnostruction Scrap, Spray Cans, Food Grade Cans, Other metal objects. [Number of images: 2586]
+
+Glass : [Number of images: 2528]
+
+Cardboard : [Number of images: 2414]
+
 ### 모델 아키텍쳐
+
 
 
 
