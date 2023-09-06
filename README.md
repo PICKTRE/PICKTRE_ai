@@ -40,7 +40,7 @@ Glass : [Number of images: 2528]
 Cardboard : [Number of images: 2414]
 
 ### 모델 아키텍쳐
-![distillation](src\diagram.PNG)
+![distillation](https://github.com/PICKTRE/PICKTRE_ai/blob/7c49407ce573ef79d31fd04605564b15c80d3420/src/diagram.png)
 
 사용하게 될 모델의 구조는 위와 같습니다.
 
@@ -48,7 +48,7 @@ knowledge Distillation을 통해 ResNet152V2를 finetune한 모델의 가중치�
 
 현재 서비스에 사용된 모델은 student model에 적용된 ResNet50V2 finetuned 모델이며, 이후 위 모델로 변경할 예정입니다. 이를 통해 같은 파라미터여도 더 좋은 성능을 기대할 수 있습니다.
 
-![model](src\result.PNG)
+![model](https://github.com/PICKTRE/PICKTRE_ai/blob/7c49407ce573ef79d31fd04605564b15c80d3420/src/result.PNG)
 현재 서비스에 사용된 모델의 성능은 위와 같습니다.
 
 
