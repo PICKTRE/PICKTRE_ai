@@ -1,7 +1,5 @@
 ### 환경을 위한 행동, 모두가 참여하는 서비스 (PICKTRE, Pick Trash) [![license](https://img.shields.io/badge/License-GPL-7F5AB6)](https://github.com/PICKTRE/PICKTRE_ai/blob/main/LICENSE)
 ---
-![tensorflow-version](https://img.shields.io/badge/tensorflow-2.9.1-FF6F00?logo=tensorflow)
-![python-version](https://img.shields.io/badge/python-3.10.9-3776AB?logo=python)
 
 
 ## 소개
