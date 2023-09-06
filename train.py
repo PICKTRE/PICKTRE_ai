@@ -126,7 +126,7 @@ history = model.fit(train_generator, validation_data=validation_generator, epoch
 opt = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=False)
 model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
 
-# 기존 MobileNetV2 층의 동결 해제
+# 기존 ResNet50V2 층의 동결 해제
 for layer in model.layers[-20:]:
     layer.trainable = True
 
