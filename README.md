@@ -4,13 +4,19 @@
 ![python-version](https://img.shields.io/badge/python-3.10.9-3776AB?logo=python)
 [![license](https://img.shields.io/badge/License-GPL-7F5AB6)](https://github.com/PICKTRE/PICKTRE_ai/blob/main/LICENSE)
 
-### 개발 배경
+## 소개
+<img src="https://github.com/PICKTRE/PICKTRE_backend/assets/101933437/bb49dce2-a814-4722-8545-8b91e318f268" width="300" height="200">
+<br>
+
+> 환경을 위한 행동, 모두가 참여하는 서비스 (PICKTRE, Pick Trash)
 
 현대 사회에서 쓰레기 문제는 점점 심각해지고 있으며, 쓰레기의 적절한 처리는 환경보호와 지속가능한 발전을 위해 중요한 문제로 인식되고 있습니다.
 
 하지만, 여전히 공공장소에서 쓰레기를 적절하게 버리지 않는 경우가 많아 환경오염과 공공장소의 미관을 해치는문제가 발생하고 있습니다.
 
 이러한 배경에서 PICKTRE는 쓰레기를 적절하게 처리하고, 시민들의 쓰레기 버리기 습관을 개선하여 환경보호와 재활용 문화를 확산 시키는데 목적을 두고 있습니다. 또한, 사용자들이 쓰레기를 버릴 때 보상을 제공하여 쓰레기 문제에 대한 인식과 참여 향상을 목표로 합니다.
+
+[PICKTRE 홈페이지](https://picktre.netlify.app "PICKTRE") 
 
 ### 개발 환경
 #### requirements.txt
